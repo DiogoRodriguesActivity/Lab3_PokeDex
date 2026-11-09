@@ -11,12 +11,12 @@ pokeapi
 
 
 >comando usados para a criação
+>>Separar por traços, pois eles indicam qual comando será para baixar (npm) e qual serão para os arquivos do projeto (react ou Vue)
 
 ```python
-Separar por traços, pois eles indicam qual comando será para baixar (npm) e qual serão para os arquivos do projeto (react ou Vue)
 
 npm create vite@latest my-react-app -- --template react
-<br> ou <br>
+ou
 npm create vite@latest my-vue-app -- --template vue
 
 ultilizar o ESlint (o mais comum do mercado)
