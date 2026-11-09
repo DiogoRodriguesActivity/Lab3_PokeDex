@@ -15,6 +15,7 @@ export default function useTheme() {
 
   useEffect(() => {
     aplicarAparencia({ theme });
+    document.body.classList.toggle("dark", theme === "dark"); // nova linha
   }, [theme]);
 
   const toggleTheme = useCallback(() => {

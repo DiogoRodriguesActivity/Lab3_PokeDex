@@ -37,6 +37,7 @@ export default function DeviceShell({
 }) {
   const noturno = theme === "dark";
 
+
   return (
     <div className="desk">
       <div className="device">
@@ -68,6 +69,7 @@ export default function DeviceShell({
             <div className="device__group device__group--tela">
               <button
                 type="button"
+                id="darkmode"
                 className="hw-button hw-button--rubber"
                 aria-pressed={noturno}
                 aria-label="Modo noturno"
