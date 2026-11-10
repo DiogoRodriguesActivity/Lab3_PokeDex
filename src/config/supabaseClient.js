@@ -1,4 +1,4 @@
- /*import { createClient } from "@supabase/supabase-js"; Tirar o comentario apos gerar o Suparbase*/
+import { createClient } from "@supabase/supabase-js";
 
 /**
  * Cliente do Supabase, criado uma vez só e compartilhado pelo projeto.
@@ -8,8 +8,12 @@
  * chave PUBLICÁVEL. Quem protege a tabela é o RLS + as funções do
  * supabase_favorites.sql, e não a chave.
  */
-const url = import.meta.env.VITE_SUPABASE_URL;
-const key = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
+const url = import.meta.env.VITE_SUPABASE_URL || import.meta.env.NEXT_PUBLIC_SUPABASE_URL;
+const key =
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
+  import.meta.env.VITE_SUPABASE_ANON_KEY ||
+  import.meta.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
+  import.meta.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 /**
  * Valores do .env.example ("<project-ref>", "sb_publishable_xxx...") contam como
